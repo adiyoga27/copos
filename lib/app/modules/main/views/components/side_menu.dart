@@ -1,3 +1,4 @@
+import 'package:copos/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -67,14 +68,17 @@ class DrawerListTile extends StatelessWidget {
     required this.title,
     required this.svgSrc,
     required this.press,
+    this.isActive = false,
   }) : super(key: key);
 
   final String title, svgSrc;
   final VoidCallback press;
+  final bool isActive;
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      tileColor: isActive ? selectedColor : secondaryColor,
       onTap: press,
       horizontalTitleGap: 0.0,
       leading: SvgPicture.asset(

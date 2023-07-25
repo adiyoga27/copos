@@ -14,7 +14,7 @@ void main() {
       title: "Application",
       initialRoute: AppPages.initial,
       getPages: AppPages.routes,
-      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: bgColor, textTheme: GoogleFonts.poppinsTextTheme(Get.textTheme).apply(bodyColor: Colors.white),
+      theme: ThemeData.light().copyWith(scaffoldBackgroundColor: bgColor, textTheme: GoogleFonts.poppinsTextTheme(Get.textTheme).apply(bodyColor: Colors.white),
       canvasColor: secondaryColor),
       
     ),
